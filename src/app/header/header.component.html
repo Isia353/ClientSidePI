@@ -1,0 +1,46 @@
+<mat-toolbar>
+    <span>My App</span>
+    <div class="logo"> Logo </div>
+    <div class="containerButtons">  
+
+      <button mat-icon-button routerLink="login" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon >portrait</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>book</mat-icon>     
+     </button>
+  </div>
+  </mat-toolbar>
+ <!-- Reaprtir menus a base de Roles , tanto como pestañas como subpestañas, aqui podemos jugar mucho con los permisos -->
+  <!--<mat-icon>exit_to_app</mat-icon> logout -->
+  <div class="navbar">
+    <button mat-button [matMenuTriggerFor]="menu">Animals</button>
+    <mat-menu #menu="matMenu">
+     <button mat-menu-item>Item 1</button>
+     <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">Users</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">Zone</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">Events</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">Task</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</div>

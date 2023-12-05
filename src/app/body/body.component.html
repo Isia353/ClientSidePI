@@ -1,0 +1,21 @@
+<p-carousel class="container" [value]="new" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" [showIndicators]="false">
+    <ng-template let-new pTemplate="new">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+            <div class="mb-3">
+                <img src="https://picsum.photos/200/300" [alt]="new.name" class="w-100 shadow-2" />
+            </div>
+            <div>
+                <h4 class="mb-1">{{ new.name }}</h4>
+                <h6 class="mt-0 mb-3">{{ '$' + new.price }}</h6>
+                <p-chip [label]="new.inventoryStatus"></p-chip>
+                <div class="car-buttons mt-2">
+                    <button type="button" class="btn btn-success">wua wua</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <div *ngIf="data">
+        <h2>Data from Laravel API</h2>
+        <!-- Display your data here -->
+      </div>
+</p-carousel>
